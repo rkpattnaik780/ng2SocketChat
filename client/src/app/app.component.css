@@ -1,0 +1,41 @@
+body{
+    padding-top : 20px ;
+    margin-top : 20px ;
+}
+
+#chatbox{
+    height : 525px ;
+    width : 620px ;
+    border : 1px solid black ;
+    padding : 5px ;
+    margin : auto ;
+    margin-top : 30px ;
+}
+
+#namesec{
+    width : 400px ;
+    padding-top : 20px ;
+}
+
+#msgsarea{
+    width : 600px ;
+    margin : auto ;
+    height : 400px ;
+    border : 1px solid black;
+    overflow-y: scroll ;
+    margin-bottom: 10px ;
+}
+
+.chats{
+    background-color : #b3ffe6 ;
+    border-radius : 0 10% 0 10% ;
+    margin : auto ;
+    margin-top : 5px ;
+    padding : 5px ;
+    max-width: 570px ;
+    overflow-wrap: break-word;
+}
+
+h1{
+    text-align: center ;
+}

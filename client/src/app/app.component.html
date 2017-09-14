@@ -1,0 +1,40 @@
+
+<!--
+
+<p>Enter Name:</p>
+<input type = "text" [(ngModel)] = "obj.name">
+<p>Enter Message:</p>
+<input type = "text" [(ngModel)] = "obj.msg">
+<button (click) = "submitMsg()" type = "submit">Send</button>
+
+
+<ul style = "list-style-type: none">
+  <li *ngFor = "let newMsg of messages">
+    <b>{{ newMsg.name }}</b> {{ newMsg.msg }}
+  </li>
+</ul>
+
+-->
+<section class="container">
+<div class="input-group" id = "namesec" *ngIf = "!showChats">
+   <input type="text" class="form-control" placeholder = "Enter Name" [(ngModel)] = "obj.name">
+   <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click) = "submitName()">Go!</button>
+   </span>
+</div>
+
+<div *ngIf = "showChats">
+   <div id = "chatbox">
+     <h1>Chat Room</h1>
+     <div id = "msgsarea" #msgsarea>
+       <div class = "chats" *ngFor="let message of messages[0]"><b>{{message.name}}</b> <br> {{message.msg}}</div>
+      </div>
+     <div id = "msgbox" class="input-group">
+       <input class = "form-control" type = "text" placeholder = "Enter a message" [(ngModel)] = "obj.msg">
+       <span class = "input-group-btn">
+       <button type="submit" (click) = "submitMsg()" class = "btn btn-primary">Send</button>
+       </span>
+       </div>
+   </div>
+</div>
+  </section>
